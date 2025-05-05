@@ -14,6 +14,7 @@ This API provides real-time occupancy data for all charge connectors in JSON for
 
 ## Architecture Overview
 ![image](https://github.com/user-attachments/assets/0c44afc4-7f62-4f19-9407-cf1bd2d5b7c2)
+draw.io link: https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&layers=1&nav=1&title=londonEVPipeline.drawio&dark=auto#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1dWr82KXTgQNFxLuidFv_iRD2DiXQnJrC%26export%3Ddownload
 
 The ETL pipeline follows a modern data lake architecture leveraging AWS services:
 
