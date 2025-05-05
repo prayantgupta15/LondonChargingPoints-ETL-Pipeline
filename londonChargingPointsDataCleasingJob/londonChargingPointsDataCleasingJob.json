@@ -1,0 +1,40 @@
+{
+  "name" : "londonChargingPointsDataCleasingJob",
+  "jobMode" : "SCRIPT",
+  "description" : "",
+  "role" : "arn:aws:iam::079448565720:role/AWSGlueServiceRoleDefault",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 3
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://aws-glue-assets-079448565720-ap-south-1/scripts/londonChargingPointsDataCleasingJob.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--spark-event-logs-path" : "s3://aws-glue-assets-079448565720-ap-south-1/sparkHistoryLogs/",
+    "--enable-job-insights" : "false",
+    "--enable-glue-datacatalog" : "true",
+    "--enable-continuous-cloudwatch-log" : "true",
+    "--job-bookmark-option" : "job-bookmark-enable",
+    "--job-language" : "python",
+    "--TempDir" : "s3://aws-glue-assets-079448565720-ap-south-1/temporary/"
+  },
+  "connections" : {
+    "connections" : [ "london_ev_db_rds_mysql_conn" ]
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 2,
+  "timeout" : 480,
+  "maxCapacity" : 2.0,
+  "glueVersion" : "4.0",
+  "numberOfWorkers" : 2,
+  "workerType" : "G.1X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "LondonChargingPoints-ETL-Pipeline",
+    "branch" : "main",
+    "folder" : "londonChargingPointsDataCleasingJob"
+  }
+}
