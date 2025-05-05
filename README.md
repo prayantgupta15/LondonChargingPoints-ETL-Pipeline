@@ -13,6 +13,8 @@ This API provides real-time occupancy data for all charge connectors in JSON for
 
 
 ## Architecture Overview
+![image](https://github.com/user-attachments/assets/0c44afc4-7f62-4f19-9407-cf1bd2d5b7c2)
+
 The ETL pipeline follows a modern data lake architecture leveraging AWS services:
 
 **Extract** (via Lambda)
