@@ -117,6 +117,7 @@ else:
                 s.id=t.id and s.sourceSystemPlaceId=t.sourceSystemPlaceId
                 and s.status<>t.status and s.last_update_time > t.record_insert_time
     """
+    # updated query
     updated_status_records_query = """
         select s.id, s.sourceSystemPlaceId, s.status,s.last_update_time from
             sourceTable s join pre_inserted_records t on 
